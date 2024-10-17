@@ -11,15 +11,17 @@ export const authOptions: NextAuthOptions = {
           username: { label: 'Username', type: 'text' },
           password: { label: 'Password', type: 'password' },
         },
-        async authorize(credentials): Promise<any> {
-          const user = await prisma.admin.findUnique({
+        async authorize(credentials : any): Promise<any> {
+          const user: any = await prisma.admin.findUnique({
             where: {
               username: credentials?.username
             }
           });
+
+          const isCorrectPassword = await compare(credentials?.password, user?.password);
   
           if(user){
-            if (credentials?.username === user.username && await compare(credentials?.password, user?.password)) {
+            if (credentials?.username === user.username && isCorrectPassword) {
               return user;
             }
           }   
