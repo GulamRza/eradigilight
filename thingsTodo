@@ -1,0 +1,69 @@
+Things to do:
+
+Improve Footer
+    Valid Footer Links
+#    More Contacts
+#    Responsiveness
+
+# Complete /Quick-Request Page
+#    Top Banner
+#    Quick Request Form
+#        Procedural Fields
+#        Styles`
+        Handle Submit
+
+# Make /About-us Page
+#    Hello Section
+#    Vision
+#    How we work
+#    Top Client
+#    Why Choose Us?
+#    Let's Talk? section - Again
+
+# Make /Services Page
+#    Heading section
+#    List of services
+#    Results
+
+# Implement NextAuth with Credential Prodivder
+
+# Create API
+# /api
+#    for addmins only
+#        /auth/signin
+#        /auth/signout
+#        /add-user
+#        /add-blog
+    
+#    for other users
+#        /blogs
+#       /blogs?id=_
+
+
+Implement Database Connection
+#    Setup Prisma
+#    Schema
+#        Admin:
+#            id, Name, Username, Password, ...
+#        Blog:
+#            id, Title, Desc, Content, Thumbnail, createAt, updateAt, Views, Like, Comments
+        <!-- Service:
+            id, Name, Desc, ... -->
+        <!-- Personal-Info:
+            ... -->
+#        Leads:
+#           id, Name, Phone, Email, Query
+#    Connet to MongoDB
+#        create db
+#        create tables - prisma migrate
+#        update api routes and auth function
+
+
+# Make /blogs Page
+#    blog cards
+#    individual blog page
+    add features
+        comment
+        like
+
+

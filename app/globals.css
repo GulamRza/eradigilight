@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --purple: rgb(78, 5, 136);
+  --orange: rgb(252, 147, 18);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  overflow-x: hidden;
+}
+
+.bg-grad{
+  background-image: linear-gradient(30deg, var(--orange), var(--purple));
+}
+.bg-grad-reverse{
+  background-image: linear-gradient(30deg, var(--purple), var(--orange));
+}
+
+h1{
+  @apply lg:text-[2rem] text-[1.5rem];
+}
+h2{
+  font-size: 1.5rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+
+section{
+  @apply w-full flex flex-col justify-center items-center;
+}
+
+section > *{
+  @apply max-w-[1600px];
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* ::selection{
+  @apply bg-black text-white;
+}
+
+textarea::selection{
+  @apply bg-white text-black;
+} */
+
+.nav-links li{
+  @apply px-4 p-2 transition-all;
+
+}
+
+.nav-links li:hover{
+  @apply border scale-110;
+}
+
+
+
+.contact-form input, .contact-form textarea{
+  @apply bg-[inherit] border-white;
+}
+
+.contact-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form input, textarea :focus{
+  @apply outline-none;
+}
+
+
+textarea:focus{
+  outline: none;
+}
