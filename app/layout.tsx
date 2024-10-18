@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: "%s - EraDigiLight"
   },
   description: "EraDigiLight Digital Marketing is a forward-thinking agency specializing in innovative online marketing strategies. With expertise in SEO, social media management, content creation, and paid advertising, we help businesses amplify their online presence, engage their target audience, and achieve measurable growth. Our dedicated team combines creativity with data-driven insights to deliver personalized marketing solutions that drive results and elevate brands.",
+  other: {
+    "google-site-verification": "RDZcgxFOvNW6IPhTVkvN07Y-kZAErtZw5T-XtSvdcjM"
+  }
 };
 
 export default function RootLayout({
