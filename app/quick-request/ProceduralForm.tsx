@@ -176,7 +176,7 @@ const StepComponent = ({ stepCount, completed, children }: {
       <div className="flex flex-col items-center gap-5">
         <span className={`p-4 px-6 border-2 rounded-full ${completed ? 'text-orange-500 border-orange-500' : 'text-gray-500'}`}>{stepCount}</span>
         <div className="overflow-hidden h-full bg-gray-200">
-          <div className={`transition-all duration-500 w-[2px] h-full -translate-y-${completed ? "0" : "full"} bg-orange-500`}></div>
+          <div className={`transition-all duration-500 w-[2px] h-full -translate-y-full -translate-y-${completed ? "0" : "full"} bg-orange-500`}></div>
         </div>
       </div>
       <div className={`flex-grow p-4 flex flex-col items-start`}>

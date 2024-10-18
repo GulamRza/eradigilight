@@ -1,5 +1,10 @@
 import React from 'react'
 import LetsTalkSection from '../Components/LetsTalkSection'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Contacts"
+}
 
 function ContactPage() {
   return (

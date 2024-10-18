@@ -2,6 +2,37 @@ import Image from 'next/image';
 import { GrView, GrCalendar } from "react-icons/gr";
 import { GoComment } from "react-icons/go";
 import { IoTimeOutline } from "react-icons/io5";
+import { Metadata } from 'next';
+
+
+export async function generateMetadata({ params }: {
+  params: {
+    id: string
+  }
+}): Promise<Metadata>{
+  let blog;
+  try {
+    const res = await fetch(
+      process.env.BASE_URL + "/api/blog/" + params.id,
+      {
+        cache: 'no-store'
+      }
+    );
+    blog = await res.json();
+
+    return {
+      title: blog.title,
+      description: blog.title
+    }
+
+
+  } catch (err) {
+    blog = { title: "Not Found", content: "Content Not Found", comments: [] };
+    return {
+      title: "Blog Not Found"
+    }
+  }
+}
 
 async function SingleBlogPage({ params }: {
   params: {
@@ -49,7 +80,7 @@ async function SingleBlogPage({ params }: {
           <ul className='flex gap-8 font-thin text-sm [&>*]:flex [&>*]:items-center [&>*]:gap-2'>
             <li><GrView /> {blog.views + 1}</li>
             <li><GrCalendar /> {new Date(Date.parse(blog.createdAt)).toDateString()}</li>
-            <li><GoComment /> {blog.comments.length}</li>
+            <li><GoComment /> {blog.comments?.length}</li>
           </ul>
         </div>
 

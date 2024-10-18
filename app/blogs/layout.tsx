@@ -1,6 +1,10 @@
+import { Metadata } from 'next';
 import React, { ReactNode } from 'react'
 import { FaInstagram, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa6";
 
+export const metadata: Metadata = {
+  title: "Blogs"
+}
 
 function layout({ children }: { children: ReactNode }) {
   return (

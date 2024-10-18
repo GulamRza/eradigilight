@@ -17,7 +17,7 @@ function AdminLayout({children}: {children: ReactNode}) {
                 <div className='w-60 min-h-screen bg-gray-800 text-white flex flex-col items-center p-2 gap-4'>
                     <div className='w-full p-2 flex items-center gap-4 border-b border-gray-600'>
                         <div className='w-8 h-8 bg-gray-600 rounded-full flex justify-center items-center'>
-                            <img src="/favicons/icon-white.png" alt="logo-white" />
+                            <img src="/icon-white.png" alt="logo-white" />
                         </div>
                         <div>{session.user?.name}</div>
                     </div>
