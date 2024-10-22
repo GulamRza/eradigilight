@@ -25,9 +25,9 @@ function QuickRequestPage() {
         { submitted ? (
             <ThankYouScreen />
         ) : (
-          <div className="p-8 px-20 text-center">
+          <div className="p-8 lg:px-20 text-center">
             <h1 className="font-bold">Quick Request</h1>
-            <p className="px-72">EraDigiLight Solution is a creative IT company deals in variety of IT services and has helped hundreds of business to build their identity on the internet.</p>
+            <p className="lg:px-72">EraDigiLight Solution is a creative IT company deals in variety of IT services and has helped hundreds of business to build their identity on the internet.</p>
             <ProceduralForm onSubmit={handleSubmit} />
           </div>
         )}

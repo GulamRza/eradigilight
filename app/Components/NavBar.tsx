@@ -69,7 +69,7 @@ function NavBar() {
             <li><Link href="/career">Career</Link></li>
             <li><Link href="/blogs">Blogs</Link></li>
             {/* <li><Link href="/career">Career</Link></li> */}
-            <li className="border hover:bg-white hover:text-black" ><Link href="/quick-request#quick-request-form">Get In Touch</Link></li>
+            <li className="border hover:bg-opacity-100" ><Link href="/quick-request#quick-request-form">Get In Touch</Link></li>
           </ul>
           <button className="w-10 cursor-pointer lg:hidden text-3xl" onClick={() => setMobileNavVisible(prev => !prev)}>
             {mobileNavVisible ? <RiCloseLargeFill /> : <CiMenuBurger />}

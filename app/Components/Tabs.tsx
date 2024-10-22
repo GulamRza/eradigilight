@@ -17,14 +17,14 @@ function Tabs({children} : {
   const [activeTab, setActiveTab] = useState(tabs[0].props.name);
 
   return (
-    <div className='border'>
+    <div>
         {/* List Of Tabs */}
-        <div className='border-b flex flex-col lg:flex-row gap-4 justify-evenly content-stretch bg-gray-200'>
+        <div className='border-b flex flex-col lg:flex-row '>
             {tabs.map((child:any) => (
                 child.props.name && 
                 <div 
                     key={child.props.name}
-                    className={`p-4 text-center lg:text-lg flex-grow cursor-pointer ${child.props.name == activeTab ? "bg-grad-reverse text-white" : ""}`}
+                    className={`p-4 text-center lg:text-lg flex-grow cursor-pointer ${child.props.name == activeTab ? "border-black border-b" : ""}`}
                     onClick={(e) => {setActiveTab(child.props.name);}}
                 >
                     {child.props.name}

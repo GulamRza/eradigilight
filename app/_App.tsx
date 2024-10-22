@@ -5,10 +5,10 @@ import { SessionProvider } from 'next-auth/react';
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import { usePathname } from 'next/navigation';
-import { Roboto } from "next/font/google";
+import { Mulish } from "next/font/google";
 
 
-const roboto = Roboto({
+const mainFont = Mulish({
   subsets: ['latin'],
   weight: ['400']
 })
@@ -22,7 +22,7 @@ function _App({children} :{
   return (
     <SessionProvider>
           {!pathname.includes('/admin') && <NavBar />}
-          <div className={roboto.className}>{children}</div>
+          <div className={mainFont.className}>{children}</div>
           {!pathname.includes('/admin') && <Footer />}
     </SessionProvider>
   )

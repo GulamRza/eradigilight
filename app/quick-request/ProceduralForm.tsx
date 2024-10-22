@@ -52,7 +52,7 @@ export const ProceduralForm = ({ onSubmit }: { onSubmit: Function }) => {
   };
 
   return (
-    <div className="w-[60%] mx-auto mt-10 p-6 bg-white rounded-lg">
+    <div className="lg:w-[60%] mx-auto mt-10 lg:p-6 bg-white rounded-lg">
       <form onSubmit={handleSubmit} className="space-y-0">
 
         {/* Step 1 */}
@@ -60,7 +60,7 @@ export const ProceduralForm = ({ onSubmit }: { onSubmit: Function }) => {
           <h3 className={`text-xl font-bold mb-6 ${completedSteps.step1 ? 'text-orange-500': ''} `}>
             How can we help you?
           </h3>
-          <div className="flex space-x-10">
+          <div className="flex flex-col lg:flex-row lg:gap-4 ">
             <label className="flex space-x-2">
               <input
                 type="radio"
@@ -172,11 +172,11 @@ const StepComponent = ({ stepCount, completed, children }: {
   children: ReactNode
 }) => {
   return (
-    <div className='p-4 flex gap-10'>
-      <div className="flex flex-col items-center gap-5">
+    <div className='lg:p-4 flex lg:gap-10'>
+      <div className="flex flex-col items-center lg:gap-5">
         <span className={`p-4 px-6 border-2 rounded-full ${completed ? 'text-orange-500 border-orange-500' : 'text-gray-500'}`}>{stepCount}</span>
         <div className="overflow-hidden h-full bg-gray-200">
-          <div className={`transition-all duration-500 w-[2px] h-full -translate-y-full -translate-y-${completed ? "0" : "full"} bg-orange-500`}></div>
+          <div className={`transition-all duration-500 w-[2px] h-${completed ? "full" : 0} bg-orange-500`}></div>
         </div>
       </div>
       <div className={`flex-grow p-4 flex flex-col items-start`}>

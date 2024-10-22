@@ -61,7 +61,7 @@ textarea::selection{
 }
 
 .nav-links li:hover{
-  @apply border scale-110;
+  @apply border-b bg-white bg-opacity-10 scale-110;
 }
 
 
